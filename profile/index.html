@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鑑定士プロフィール｜やまと式かずたま術 公認鑑定士 平泉喜仁央</title>
+<meta name="description" content="やまと式かずたま術 公認鑑定士・平泉喜仁央のプロフィール。40年のビジネス経験と数の法則を掛け合わせ、論理的で温かい鑑定をお届けします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a2833;
+  --murasaki-deep:#26215c;
+  --murasaki:#3c3489;
+  --kin:#c9a24b;
+  --kin-light:#fac775;
+  --kinari:#f7f5ef;
+  --white:#ffffff;
+  --line-green:#06c755;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  color:var(--ink);
+  background:var(--kinari);
+  line-height:1.95;
+  font-size:16px;
+}
+
+/* ===== Hero ===== */
+.hero{
+  background:linear-gradient(160deg,var(--murasaki-deep) 0%,var(--murasaki) 100%);
+  color:var(--white);
+  padding:64px 24px 56px;
+  text-align:center;
+}
+.hero .eyebrow{
+  font-size:12px;letter-spacing:.35em;color:var(--kin-light);margin-bottom:20px;
+}
+.photo{
+  width:132px;height:132px;
+  border-radius:50%;
+  margin:0 auto 20px;
+  background:#4a42a0;
+  border:3px solid var(--kin);
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:#cecbf6;letter-spacing:.1em;
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.hero h1{
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;
+  font-size:clamp(26px,7vw,34px);
+  letter-spacing:.16em;
+}
+.hero .yomi{font-size:12px;letter-spacing:.3em;color:#cecbf6;margin-top:8px}
+.hero .titleline{
+  font-size:13px;color:var(--kin-light);letter-spacing:.14em;margin-top:16px;
+}
+
+/* ===== Sections ===== */
+.section{padding:56px 24px}
+.section-inner{max-width:680px;margin:0 auto}
+.section-label{
+  display:flex;align-items:center;gap:14px;margin-bottom:26px;
+}
+.section-label::before{content:"";width:34px;height:1px;background:var(--kin)}
+.section-label span{font-size:12px;letter-spacing:.3em;color:var(--kin)}
+h2{
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;
+  font-size:clamp(21px,5.2vw,26px);
+  letter-spacing:.06em;
+  line-height:1.65;
+  margin-bottom:22px;
+}
+.section p{font-size:15px}
+p+p{margin-top:1.2em}
+strong{font-weight:700;color:var(--murasaki-deep)}
+
+/* 想いの引用 */
+.credo{
+  background:var(--white);
+  border-left:3px solid var(--kin);
+  padding:26px 26px;
+  margin-top:28px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+}
+.credo p{
+  font-family:'Shippori Mincho',serif;
+  font-size:16.5px;
+  color:var(--murasaki-deep);
+  line-height:2;
+}
+
+/* 大切にしていること */
+.values{display:grid;gap:14px;margin-top:30px}
+.value-card{
+  background:var(--white);
+  padding:24px 24px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+}
+.value-card .t{
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;font-size:17px;
+  color:var(--murasaki-deep);
+  margin-bottom:8px;
+  display:flex;align-items:center;gap:10px;
+}
+.value-card .t::before{
+  content:"";width:8px;height:8px;background:var(--kin);
+  transform:rotate(45deg);flex-shrink:0;
+}
+.value-card p{font-size:14px}
+
+/* 略歴 */
+.bio{
+  background:var(--white);
+  padding:30px 26px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+  margin-top:8px;
+}
+.bio dl{
+  display:grid;grid-template-columns:96px 1fr;gap:6px 18px;
+  font-size:14px;
+}
+.bio dt{
+  color:var(--kin);font-weight:700;letter-spacing:.04em;
+}
+.bio dd{line-height:1.85}
+
+/* CTA */
+.cta{
+  background:var(--murasaki-deep);
+  color:var(--white);
+  text-align:center;
+  padding:64px 24px;
+}
+.cta h2{color:var(--white)}
+.cta .lead{font-size:14px;color:#cecbf6;max-width:520px;margin:0 auto 32px}
+.btn{
+  display:block;max-width:340px;margin:0 auto;
+  padding:17px 20px;font-size:15.5px;font-weight:700;letter-spacing:.08em;
+  text-decoration:none;border-radius:6px;transition:opacity .2s;
+}
+.btn:hover{opacity:.88}
+.btn-line{background:var(--line-green);color:var(--white)}
+footer{
+  background:#1c1847;color:#8d89c9;text-align:center;
+  font-size:11.5px;letter-spacing:.1em;padding:26px 20px;
+}
+@media(max-width:480px){
+  .bio dl{grid-template-columns:1fr;gap:2px}
+  .bio dt{margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="eyebrow">PROFILE</p>
+  <div class="photo"><img src="profile-photo.jpg" alt="平泉喜仁央"></div>
+  <h1>平泉 喜仁央</h1>
+  <p class="yomi">ひらいずみ・きにお</p>
+  <p class="titleline">やまと式かずたま術 公認鑑定士・ベーシック講師</p>
+</header>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label"><span>ごあいさつ</span></div>
+    <h2>40年のビジネスの現場と、<br>数の法則が教えてくれたこと。</h2>
+    <p>はじめまして。やまと式かずたま術 公認鑑定士の平泉喜仁央（本名・石原堅）です。</p>
+    <p>私はオリンパス株式会社で40年にわたり、ものづくり・品質保証・海外営業の現場を歩いてきました。数字と論理で判断する世界に長く身を置きながら、いつも心に残っていたのは、<strong>同じ能力を持つ人でも、置かれた役割やタイミングによって輝き方がまるで違う</strong>、という不思議でした。</p>
+    <p>かずたま術と出会ったのは、独立後、目標達成コーチとして活動していた頃のことです。鑑定士でもある友人のコーチから鑑定を受け、驚きました。自己理解が一気に深まったこと。そして、自分の人生の節目——動いた時期、待つべきだった時期——が、数の示すタイミングとぴたりと重なっていたこと。長年ビジネスの現場で数字を見てきた私が、理屈で納得できたのです。この体験が、自ら学ぶ道へと進むきっかけになりました。</p>
+    <p>やまと式かずたま術は、あの長年の問いに、数の法則という形で答えをくれました。誕生日が示す「役割」と、名前が示す「資質」。この2つを知ることは、人生の航路図を手にすることだと、私は考えています。</p>
+    <div class="credo">
+      <p>信頼は、一朝一夕には築けません。目の前のお一人おひとりと、顔の見える関係を大切に。鑑定でお会いできるご縁を、何よりの宝と思っています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white)">
+  <div class="section-inner">
+    <div class="section-label"><span>鑑定で大切にしていること</span></div>
+    <h2>論理的に、そして温かく。</h2>
+    <div class="values">
+      <div class="value-card">
+        <div class="t">断定ではなく、対話で</div>
+        <p>鑑定は「言い当てる」場ではなく、ご自身の言葉で気づいていただく場だと考えています。結果はそっとお渡しし、どう受け取るかはご本人の中にある答えを大切にします。</p>
+      </div>
+      <div class="value-card">
+        <div class="t">ビジネスの言葉で語れる鑑定</div>
+        <p>経営の現場を長く歩いてきたからこそ、経営者の方には事業の言葉で、働く方にはキャリアの言葉で。数の法則を、実生活で使える形に翻訳してお伝えします。</p>
+      </div>
+      <div class="value-card">
+        <div class="t">鑑定のあとも、伴走を</div>
+        <p>鑑定は受けて終わりではなく、そこからが始まりです。転換期の迎え方、ご家族との関わり方など、その後のご相談にも寄り添います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label"><span>略歴</span></div>
+    <div class="bio">
+      <dl>
+        <dt>本名</dt>
+        <dd>石原 堅（いしはら かたし）</dd>
+        <dt>経歴</dt>
+        <dd>オリンパス株式会社にて40年間、製造・品質保証・海外営業に従事。独立後、目標達成コーチとしての活動を経て、現在はKINI合同会社 代表として、八王子・多摩エリアの中小企業のAI活用・経営支援にも取り組む。</dd>
+        <dt>資格</dt>
+        <dd>令和4年 やまと式かずたま術 公認鑑定士 認定（発案者・倭眞名氏に師事）／ベーシック講師</dd>
+        <dt>鑑定実績</dt>
+        <dd>これまでに500人を鑑定。経営者の方から、ご夫婦・子育て世代・セカンドライフ世代まで幅広く。</dd>
+        <dt>拠点</dt>
+        <dd>東京・八王子（鑑定はZOOMによるオンラインが基本。対面もご相談いただけます）</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>まずは、お話ししてみませんか。</h2>
+  <p class="lead">LINE公式アカウントでは、無料のミニ鑑定と各種鑑定のご予約を受け付けています。ご質問だけでも、お気軽にどうぞ。</p>
+  <a class="btn btn-line" href="https://lin.ee/GUkelMX">LINEでミニ鑑定・ご予約へ</a>
+</section>
+
+<footer>© やまと式かずたま術 公認鑑定士 平泉喜仁央</footer>
+
+</body>
+</html>
