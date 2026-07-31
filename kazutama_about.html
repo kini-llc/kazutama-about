@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>やまと式かずたま術とは｜公認鑑定士 平泉喜仁央</title>
+<meta name="description" content="やまと式かずたま術は、誕生日と名前から人生の設計図を読み解く自己分析メソッドです。占いとの違い、元数盤のしくみをご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a2833;
+  --murasaki-deep:#26215c;
+  --murasaki:#3c3489;
+  --kin:#c9a24b;
+  --kin-light:#fac775;
+  --kinari:#f7f5ef;
+  --white:#ffffff;
+  --line-green:#06c755;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  color:var(--ink);
+  background:var(--kinari);
+  line-height:1.9;
+  font-size:16px;
+}
+.serif{font-family:'Shippori Mincho',serif}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  background:linear-gradient(160deg,var(--murasaki-deep) 0%,var(--murasaki) 100%);
+  color:var(--white);
+  padding:72px 24px 88px;
+  overflow:hidden;
+}
+.hero-inner{
+  position:relative;
+  max-width:680px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  z-index:1;
+}
+.hero-text .eyebrow{
+  font-size:12px;
+  letter-spacing:.35em;
+  color:var(--kin-light);
+  margin-bottom:20px;
+}
+.hero-title{
+  writing-mode:vertical-rl;
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;
+  font-size:clamp(26px,7vw,40px);
+  line-height:1.7;
+  letter-spacing:.18em;
+  height:clamp(280px,58vw,360px);
+}
+.hero-sub{
+  writing-mode:vertical-rl;
+  font-size:13px;
+  letter-spacing:.28em;
+  color:#cecbf6;
+  height:clamp(280px,58vw,360px);
+  padding-top:8px;
+}
+/* 元数盤モチーフ */
+.gensuban{
+  display:grid;
+  grid-template-columns:repeat(9,1fr);
+  gap:3px;
+  width:clamp(150px,38vw,210px);
+  aspect-ratio:1;
+  flex-shrink:0;
+  opacity:.92;
+}
+.gensuban span{
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(6px,1.5vw,9px);
+  color:#cecbf6;
+  background:rgba(255,255,255,.05);
+  border:.5px solid rgba(255,255,255,.14);
+  aspect-ratio:1;
+}
+.gensuban span.lit{
+  color:var(--murasaki-deep);
+  background:var(--kin-light);
+  font-weight:700;
+}
+.hero-caption{
+  position:relative;
+  max-width:680px;
+  margin:28px auto 0;
+  font-size:12px;
+  color:#cecbf6;
+  letter-spacing:.06em;
+  z-index:1;
+}
+
+/* ===== Sections ===== */
+.section{padding:64px 24px}
+.section-inner{max-width:680px;margin:0 auto}
+.section-label{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:28px;
+}
+.section-label::before{
+  content:"";
+  width:34px;height:1px;background:var(--kin);
+}
+.section-label span{
+  font-size:12px;letter-spacing:.3em;color:var(--kin);
+}
+h2{
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;
+  font-size:clamp(22px,5.4vw,28px);
+  letter-spacing:.06em;
+  line-height:1.6;
+  margin-bottom:24px;
+}
+p+p{margin-top:1.2em}
+.section p{font-size:15.5px}
+strong{font-weight:700;color:var(--murasaki-deep)}
+
+/* 誕生日×名前 */
+.pair{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  margin:32px 0 20px;
+}
+.pair-card{
+  background:var(--white);
+  border-top:3px solid var(--murasaki);
+  padding:24px 18px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+}
+.pair-card.kin{border-top-color:var(--kin)}
+.pair-card .kanji{
+  font-family:'Shippori Mincho',serif;
+  font-size:24px;font-weight:600;
+  letter-spacing:.1em;
+  margin-bottom:6px;
+}
+.pair-card .role{
+  font-size:12px;letter-spacing:.2em;color:var(--kin);
+  margin-bottom:12px;
+}
+.pair-card p{font-size:13.5px;line-height:1.85}
+.equation{
+  text-align:center;
+  font-family:'Shippori Mincho',serif;
+  font-size:15px;
+  letter-spacing:.14em;
+  color:var(--murasaki-deep);
+  margin-top:26px;
+}
+.equation .x{color:var(--kin);padding:0 .4em}
+
+/* 特徴リスト（占いとの違い） */
+.diff{
+  background:var(--white);
+  padding:32px 26px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+  margin-top:30px;
+}
+.diff dl+dl{margin-top:22px;padding-top:22px;border-top:1px solid #eceadf}
+.diff dt{
+  font-family:'Shippori Mincho',serif;
+  font-weight:600;font-size:16.5px;
+  color:var(--murasaki-deep);
+  margin-bottom:6px;
+}
+.diff dd{font-size:14px;line-height:1.85}
+
+/* 3つの知る */
+.three{
+  display:grid;gap:14px;margin-top:32px;
+}
+.three-card{
+  background:linear-gradient(135deg,var(--murasaki-deep),var(--murasaki));
+  color:var(--white);
+  padding:26px 24px;
+}
+.three-card .t{
+  font-family:'Shippori Mincho',serif;
+  font-size:19px;font-weight:600;letter-spacing:.12em;
+  color:var(--kin-light);
+  margin-bottom:8px;
+}
+.three-card p{font-size:13.5px;color:#e6e4fa;line-height:1.85}
+
+/* 鑑定士 */
+.profile{
+  background:var(--white);
+  padding:36px 28px;
+  box-shadow:0 2px 14px rgba(38,33,92,.06);
+  text-align:center;
+}
+.profile .name{
+  font-family:'Shippori Mincho',serif;
+  font-size:24px;font-weight:600;letter-spacing:.14em;
+  margin:10px 0 4px;
+}
+.profile .title{font-size:12px;letter-spacing:.24em;color:var(--kin)}
+.profile p{font-size:14px;margin-top:18px;text-align:left}
+
+/* CTA */
+.cta{
+  background:var(--murasaki-deep);
+  color:var(--white);
+  text-align:center;
+  padding:72px 24px;
+}
+.cta h2{color:var(--white)}
+.cta .lead{font-size:14.5px;color:#cecbf6;max-width:520px;margin:0 auto 36px}
+.btn{
+  display:block;
+  max-width:340px;
+  margin:0 auto;
+  padding:17px 20px;
+  font-size:15.5px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-decoration:none;
+  border-radius:6px;
+  transition:opacity .2s, transform .2s;
+}
+.btn:hover{opacity:.88;transform:translateY(-1px)}
+.btn-line{
+  background:var(--line-green);
+  color:var(--white);
+}
+.btn-sub{
+  background:transparent;
+  color:var(--kin-light);
+  border:1px solid var(--kin);
+  margin-top:14px;
+  font-weight:500;
+}
+.cta .note{font-size:12px;color:#9c98d8;margin-top:22px;letter-spacing:.04em}
+
+footer{
+  background:#1c1847;
+  color:#8d89c9;
+  text-align:center;
+  font-size:11.5px;
+  letter-spacing:.1em;
+  padding:26px 20px;
+}
+
+/* reveal */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+}
+@media(max-width:560px){
+  .pair{grid-template-columns:1fr}
+  .hero-inner{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">YAMATO-SHIKI KAZUTAMA</p>
+      <div style="display:flex;gap:18px;flex-direction:row-reverse;justify-content:flex-end">
+        <h1 class="hero-title">数字が示す、<br>あなたの役割。</h1>
+        <p class="hero-sub">やまと式かずたま術</p>
+      </div>
+    </div>
+    <div class="gensuban" id="gensuban" aria-hidden="true"></div>
+  </div>
+  <p class="hero-caption">誕生日と名前から、70億分の1の「人生の設計図」を読み解く。</p>
+</header>
+
+<section class="section">
+  <div class="section-inner reveal">
+    <div class="section-label"><span>かずたま術とは</span></div>
+    <h2>占いではなく、<br>「自分の取扱説明書」です。</h2>
+    <p>やまと式かずたま術は、日本古来の「数霊（かずたま）」の思想をもとにした自己分析メソッドです。<strong>誕生日</strong>と<strong>名前</strong>——誰もが持つ2つの固有のデータから、「自分は何者か」「家系の中でどんな役割があるか」「いつ動くべきか」を読み解いていきます。</p>
+    <p>未来を言い当てるものではありません。同じ誕生日・同じ名前であれば、誰が計算しても同じ結果にたどり着く。その意味で、これは占いというより「人生の設計図を読む技術」といえるかもしれません。</p>
+    <div class="diff">
+      <dl>
+        <dt>再現性がある</dt>
+        <dd>結果は計算によって導かれます。鑑定士の感覚やその日の運勢で変わることはありません。</dd>
+      </dl>
+      <dl>
+        <dt>70億分の1の個別性</dt>
+        <dd>誕生日と名前の組み合わせから導かれる設計図は、同姓同名・同誕生日でない限り、世界にひとつだけのものになります。</dd>
+      </dl>
+      <dl>
+        <dt>数学的なしくみ</dt>
+        <dd>計算の土台は、縦・横・斜めのどの列を足しても合計が369になる、9×9＝81マスの魔方陣「元数盤（げんすうばん）」。神秘ではなく、数の法則に基づいています。</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white)">
+  <div class="section-inner reveal">
+    <div class="section-label"><span>2つの要素</span></div>
+    <h2>誕生日が「役割」を、<br>名前が「資質」を語ります。</h2>
+    <p>かずたま術では、人生の物語は2つの要素からできていると考えます。</p>
+    <div class="pair">
+      <div class="pair-card">
+        <div class="kanji serif">誕生日</div>
+        <div class="role">役割 ― 人生の宿題</div>
+        <p>この世で果たしていく課題と、家系というチームの中でのポジション。チームで言えば「守備位置」にあたります。</p>
+      </div>
+      <div class="pair-card kin">
+        <div class="kanji serif">名前</div>
+        <div class="role">資質 ― 才能という装備</div>
+        <p>役割を生き抜くために授かった道具であり、スペック。名前の音（言霊）を数に変換して読み解きます。</p>
+      </div>
+    </div>
+    <p class="equation">誕生日（役割）<span class="x">×</span>名前（資質）<span class="x">＝</span>あなたというキャラクター</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner reveal">
+    <div class="section-label"><span>3つの「知る」</span></div>
+    <h2>自分を知り、相手を知り、<br>時を知る。</h2>
+    <p>鑑定でお伝えするのは、大きくこの3つです。</p>
+    <div class="three">
+      <div class="three-card">
+        <div class="t">自分を知る</div>
+        <p>自分の役割と資質がわかると、人生における立ち位置と、進むときに使う道具が見えてきます。</p>
+      </div>
+      <div class="three-card">
+        <div class="t">相手を知る</div>
+        <p>人にはそれぞれのエネルギーの型があります。「なぜかこの人と話が通じない」の根っこが、力関係の法則から見えてきます。ご夫婦・親子・職場の人間関係に。</p>
+      </div>
+      <div class="three-card">
+        <div class="t">時を知る</div>
+        <p>人生には、その人固有の転換期があります。いつアクセルを踏み、いつ備えるか。変化の波に先回りするための羅針盤になります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--white)">
+  <div class="section-inner reveal">
+    <div class="section-label"><span>鑑定士</span></div>
+    <div class="profile">
+      <div class="title">やまと式かずたま術 公認鑑定士</div>
+      <div class="name">平泉 喜仁央</div>
+      <p>ひらいずみ・きにお。発案者 倭眞名氏のもとで学んだ公認鑑定士として、経営者の方から、ご夫婦・子育て世代の方まで、幅広く鑑定を行っています。鑑定はZOOMによるオンラインが基本です（対面もご相談いただけます）。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="reveal">
+    <h2>まずは、無料のミニ鑑定から。</h2>
+    <p class="lead">LINE公式アカウントでは、生年月日を選ぶだけで、あなたの「役割」の入口がわかる無料ミニ鑑定をご用意しています。所要時間は30秒ほどです。</p>
+    <a class="btn btn-line" href="https://lin.ee/GUkelMX">LINEでミニ鑑定をやってみる</a>
+    <a class="btn btn-sub" href="https://lin.ee/GUkelMX">鑑定メニュー・ご予約はこちら</a>
+    <p class="note">ご登録後、メニューの「ミニ鑑定」「鑑定を予約する」からお進みください。</p>
+  </div>
+</section>
+
+<footer>© やまと式かずたま術 公認鑑定士 平泉喜仁央</footer>
+
+<script>
+// 元数盤モチーフ：81マスに数字を配し、ランダムに金色へ灯す
+(function(){
+  const g = document.getElementById('gensuban');
+  const cells = [];
+  for(let i=1;i<=81;i++){
+    const s=document.createElement('span');
+    s.textContent=i;
+    g.appendChild(s);cells.push(s);
+  }
+  const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(motionOK){
+    setInterval(()=>{
+      cells.forEach(c=>c.classList.remove('lit'));
+      const n=3+Math.floor(Math.random()*3);
+      for(let i=0;i<n;i++){
+        cells[Math.floor(Math.random()*81)].classList.add('lit');
+      }
+    },1600);
+  }else{
+    [4,40,76].forEach(i=>cells[i].classList.add('lit'));
+  }
+})();
+// スクロールで表示
+(function(){
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
